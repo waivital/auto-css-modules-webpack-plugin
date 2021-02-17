@@ -1,0 +1,13 @@
+{
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["**/dist/**/*.js"],
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest": true
+  }
+}

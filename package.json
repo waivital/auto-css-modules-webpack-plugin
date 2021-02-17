@@ -1,0 +1,72 @@
+{
+  "name": "auto-css-modules-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Automatically detect and mark CSS modules for webpack.",
+  "main": "index.js",
+  "scripts": {
+    "clean:setup": "./scripts/setup-test.sh clean",
+    "pretest": "./scripts/setup-test.sh",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waivital/auto-css-modules-webpack-plugin.git"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write"
+    ]
+  },
+  "files": [
+    "lib/",
+    "index.js",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "webpack",
+    "plugin",
+    "css-modules"
+  ],
+  "author": "waivital",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waivital/auto-css-modules-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/waivital/auto-css-modules-webpack-plugin#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "eslint": "^7.20.0",
+    "fs-extra": "^9.1.0",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "acorn-walk": "^8.0.2"
+  },
+  "peerDependencies": {
+    "webpack": "^4.46.0 || ^5.20.0"
+  },
+  "peerDependenciesMeta": {
+    "webpack": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "jest": {
+    "coverageProvider": "v8",
+    "testEnvironment": "node",
+    "testRegex": "/__tests__/.*\\.(test|spec)\\.js$"
+  }
+}
