@@ -2,6 +2,8 @@
 
 在 webpack 中自动检测并标记 CSS Modules.
 
+- [English](README.md)
+
 ## 安装
 
 For npm

@@ -2,6 +2,8 @@
 
 Automatically detect and mark CSS modules for webpack.
 
+- [简体中文](README_CN.md)
+
 ## Installation
 
 For npm
