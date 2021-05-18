@@ -60,6 +60,8 @@ import styles from './index.css'
 const styles = require('./index.css')
 // Or
 const styles = _anyFunctionWrap(require('./index.css'))
+// Or
+const styles = require('./index.css').default
 ```
 
 ## 参数

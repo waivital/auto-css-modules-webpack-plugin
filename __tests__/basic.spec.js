@@ -128,7 +128,16 @@ function createTestWithWebpack(webpack) {
 
       it('works with single wrapped require call', async () => {
         await buildWithWebpack(webpack, {
-          entry: 'require-wrapped.js',
+          entry: 'require-wrap-function.js',
+          plugins: [new AutoCSSModulesWebpackPlugin()],
+        })
+
+        expect(await readOutput()).toContain(createExpect(LESS_CONTENT, true))
+      })
+
+      it('works with require inside MemberExpression', async () => {
+        await buildWithWebpack(webpack, {
+          entry: 'require-wrap-member.js',
           plugins: [new AutoCSSModulesWebpackPlugin()],
         })
 

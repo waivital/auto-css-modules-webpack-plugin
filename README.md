@@ -60,6 +60,8 @@ import styles from './index.css'
 const styles = require('./index.css')
 // Or
 const styles = _anyFunctionWrap(require('./index.css'))
+// Or
+const styles = require('./index.css').default
 ```
 
 ## Options
@@ -75,11 +77,11 @@ Default extname list is `['.css', '.less', '.sass', '.scss', '.stylus', '.styl']
 
 ## How it works
 
-Because the usage scenario of CSS Modules always need `import` or `require` a CSS file then bind it to a variable, so we can analyze the ast of the file, when it match this pattern, add a query to the request string.
+Because the usage scenario of CSS Modules always needs `import` or `require` a CSS file then bind it to a variable, so we can analyze the ast of the file, when it matches this pattern, add a query to the request string.
 
 For example, `import styles from './index.css'` will be converted to `import styles from'./index.css?modules'`
 
-And a [hook](https://webpack.js.org/api/parser/#program) `parser.hooks.program` inside webpack gives us the opportunity to modify the file's ast before it actually parse the dependencies.
+And a [hook](https://webpack.js.org/api/parser/#program) `parser.hooks.program` inside webpack allows us to modify the ast of the file before it actually parses the dependencies.
 
 Then we can use `resourceQuery` to pass different options to the loader, one for normal CSS and one for CSS Modules.
 
