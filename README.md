@@ -23,6 +23,8 @@ config with `css-loader`
 **webpack.config.js**
 
 ```javascript
+const AutoCSSModulesWebpackPlugin = require('auto-css-modules-webpack-plugin')
+
 module.exports = {
   module: {
     rules: [
@@ -30,19 +32,34 @@ module.exports = {
         test: /\.css$/i,
         oneOf: [
           {
+            // enable cssModules for specific resourceQuery
             resourceQuery: /modules/,
-            loader: 'css-loader',
-            options: {
-              // Enable CSS Modules features and setup options for them.
-              modules: {
-                localIdentName: '[path][name]__[local]--[hash:base64:5]',
-                // ... Other options
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  importLoaders: 1,
+                  // Enable CSS Modules features and setup options for them.
+                  modules: {
+                    localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                    // ... Other options
+                  }
+                }
               }
-            }
+            ]
           },
           {
-            loader: 'css-loader'
-          }
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  importLoaders: 1,
+                }
+              }
+            ]
+          },
         ],
       },
     ],
