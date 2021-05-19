@@ -2,7 +2,9 @@
 
 Automatically detect and mark CSS modules for webpack.
 
-- [简体中文](README_CN.md)
+[![npm][npm]][npm-url]
+
+> *Read this in other languages: [English](README.md), [简体中文](README_CN.md)*
 
 ## Installation
 
@@ -110,3 +112,6 @@ Inspired by [@umijs/babel-plugin-auto-css-modules](https://www.npmjs.com/package
 ## License
 
 [MIT](./LICENSE)
+
+[npm]: https://img.shields.io/npm/v/auto-css-modules-webpack-plugin.svg
+[npm-url]: https://npmjs.com/package/auto-css-modules-webpack-plugin

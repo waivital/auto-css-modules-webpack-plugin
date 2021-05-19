@@ -2,7 +2,10 @@
 
 在 webpack 中自动检测并标记 CSS Modules.
 
-- [English](README.md)
+[![npm][npm]][npm-url]
+
+> *其他语言版本: [English](README.md), [简体中文](README_CN.md)*
+
 
 ## 安装
 
@@ -106,3 +109,6 @@ AutoCSSModulesWebpackPlugin 支持传入一个可选的 options 参数，具体�
 ## License
 
 [MIT](./LICENSE)
+
+[npm]: https://img.shields.io/npm/v/auto-css-modules-webpack-plugin.svg
+[npm-url]: https://npmjs.com/package/auto-css-modules-webpack-plugin
