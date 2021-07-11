@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.1.1](https://github.com/waivital/auto-css-modules-webpack-plugin/compare/v1.1.0...v1.1.1) (2021-07-11)
 
+
+### Docs
+
+* add examples ([a8ba1fd](https://github.com/waivital/auto-css-modules-webpack-plugin/commit/a8ba1fd2164667b9547964c4c3db15397b8bda86))
+
 ## [1.1.0](https://github.com/waivital/auto-css-modules-webpack-plugin/compare/v1.0.0...v1.1.0) (2021-05-18)
 
 
