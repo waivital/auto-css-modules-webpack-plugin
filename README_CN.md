@@ -21,6 +21,9 @@ yarn add -D auto-css-modules-webpack-plugin
 
 ## 使用方式
 
+> 完整的用法可以查看这里 [examples](https://github.com/waivital/auto-css-modules-webpack-plugin/tree/main/examples)
+
+
 和 `css-loader` 一起使用
 
 **webpack.config.js**
@@ -42,7 +45,7 @@ module.exports = {
               {
                 loader: 'css-loader',
                 options: {
-                  importLoaders: 1,
+                  importLoaders: 0,
                   // Enable CSS Modules features and setup options for them.
                   modules: {
                     localIdentName: '[path][name]__[local]--[hash:base64:5]',
@@ -58,7 +61,7 @@ module.exports = {
               {
                 loader: 'css-loader',
                 options: {
-                  importLoaders: 1,
+                  importLoaders: 0,
                 }
               }
             ]
